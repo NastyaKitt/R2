@@ -148,6 +148,7 @@ button {
             right: 103rem;
             bottom: 6rem;
             animation-delay: 0.4s;
+            height: 56rem;
         }
     }
 }
