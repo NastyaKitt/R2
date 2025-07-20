@@ -70,7 +70,6 @@ button {
     position: relative;
     display: flex;
     align-items: flex-end;
-    bottom: 5rem;
 }
 .naming {
     width: 100%;
@@ -79,7 +78,7 @@ button {
     align-items: center;
     position: absolute;
     z-index: 3;
-    top: 22rem;
+    top: 16rem;
     & img {
         &:first-child {
             height: auto;
