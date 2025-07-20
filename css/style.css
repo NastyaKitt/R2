@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #28211F;
+}
+button {
+    cursor: pointer;
+}
+/* header {
+    height: 6.25rem;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+/* ----------------------- centerHead*/
+.centerHead {
+    width: -webkit-fill-available;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+    & button {
+        width: -webkit-fill-available;
+        height: 100%;
+        background-image: url(img/headerButton.png);
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+        color: #d7d7d7;
+        font-size: 2rem;
+        border: none;
+    }
+}
+/* ----------------------- rightHead*/
+.rightHead {
+    height: 5rem;
+    width: 11rem;
+    background-image: url(img/language.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.chinese,.korean {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-image: url(img/chinese.jpg);
+    background-position: center;
+    &:last-child {
+        background-image: url(img/korean.jpg);
+    }
+}
+/* ------------------------ heroBlock*/
+.heroBlock {
+    height: 110vh;
+    background-image: url(img/mainBack.jpg);
+    background-size: cover;
+    position: relative;
+}
+.heros {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.naming {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25rem;
+    & img {
+        &:first-child {
+            height: auto;
+            width: 22rem;
+            position: relative;
+            top: 6rem;
+        }
+        &:nth-child(2) {
+            position: relative;
+            width: 100%;
+        }
+        &:last-child {
+            width: 40rem;
+            position: relative;
+            bottom: 12rem;
+        }
+    }
+}
+.heross {
+    position: relative;
+    display: flex;
+    & img {
+        position: relative;
+        opacity: 0;
+        animation: fadeIn 0.75s forwards;
+        &:first-child {
+            left: 10rem;
+            animation-delay: 0s;
+        }
+        &:nth-child(2) {
+            right: 3rem;
+            animation-delay: 0.4s;
+        }
+        &:nth-child(3) {
+            right: 18.5rem;
+            bottom: 3rem;
+            animation-delay: 0.6s;
+
+        }
+        &:nth-child(4) {
+            right: 40rem;
+            top: 4.5rem;
+            animation-delay: 0.8s;
+
+        }
+        &:nth-child(5) {
+            right: 61.25rem;
+            animation-delay: 1s;
+
+        }
+        &:nth-child(6) {
+            right: 76rem;
+            bottom: 4rem;
+            animation-delay: 0.8s;
+
+        }
+        &:nth-child(7) {
+            right: 92.75rem;
+            bottom: 6rem;
+            animation-delay: 0.6s;
+
+        }
+        &:last-child {
+            right: 105rem;
+            bottom: 6rem;
+            animation-delay: 0.4s;
+        }
+    }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ------------------------ twoBlock*/
+.twoBlock {
+    background-image: url(img/twoBlockBack.jpg);
+    height: 75rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-size: cover;
+
+}
+.tableTwo {
+    background-image: url(img/twoBlockTable.png);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60rem;
+    height: 52rem;
+    padding: 5rem 0;
+    margin-right: 7rem;
+    & img {
+        width: 30rem;
+    }
+    & video {
+        height: 20rem;
+    }
+}
+/* ----------------------- threeBlock*/
+.threeBlock {
+    background-image: url(img/threeBlockBack.jpg);
+    position: relative;
+    z-index: 1;
+    padding: 5rem 0;
+    background-size: cover;
+}
+.smoke {
+    position: absolute;
+    top: -10rem;
+    right: -12rem;
+    z-index: 90;
+    & img {
+        width: 150%;
+    }
+}
+.tableThree {
+    background-image: url(img/threeBlockTable.png);
+    width: 94rem;
+    position: relative;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    top: -1rem;
+}
+.threeText {
+    mask-image: 
+        radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+/* ----------------------- fourBlock*/
+.fourBlock {
+    background-image: url(img/fourBlockBack.jpg);
+    position: relative;
+    height: 89.5rem;
+    background-size: cover;
+}
+.fourMan {
+    position: absolute;
+    right: 0;
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+.fourList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 85rem;
+    height: 80rem;
+}
+.fourItem {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.fourTable {
+    background-image: url(img/fourBlockTable.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26.75rem;
+    width: 37.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ----------------------- fiveBlock*/
+.fiveBlock {
+    background-image: url(img/fiveBlockBack.jpg);
+    height: 77rem;
+    position: relative;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.tableFive {
+    background-image: url(img/fiveBlockTable.png);
+    background-size: cover;
+    height: 44rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem 4rem;
+}
+.dragons {
+    height: 11rem;
+    width: auto;
+    position: relative;
+    bottom: 5rem;
+}
+.fiveBlockButton {
+    width: 46rem;
+    height: 18.5rem;
+    background-image: url(img/fiveBlockButton.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+}
+/* 4, 1, 7, 3, 8, 2, 5, 6 */
