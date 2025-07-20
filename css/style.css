@@ -60,7 +60,7 @@ button {
 }
 /* ------------------------ heroBlock*/
 .heroBlock {
-    height: 110vh;
+    height: 100vh;
     background-image: url(img/mainBack.jpg);
     background-size: cover;
     position: relative;
@@ -70,6 +70,7 @@ button {
     position: relative;
     display: flex;
     align-items: flex-end;
+    bottom: 5rem;
 }
 .naming {
     width: 100%;
@@ -77,7 +78,8 @@ button {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 25rem;
+    z-index: 3;
+    top: 22rem;
     & img {
         &:first-child {
             height: auto;
@@ -103,6 +105,7 @@ button {
         position: relative;
         opacity: 0;
         animation: fadeIn 0.75s forwards;
+        height: 51rem;
         &:first-child {
             left: 10rem;
             animation-delay: 0s;
@@ -119,29 +122,30 @@ button {
         }
         &:nth-child(4) {
             right: 40rem;
-            top: 4.5rem;
+            top: 3.5rem;
             animation-delay: 0.8s;
+            z-index: 2;
 
         }
         &:nth-child(5) {
-            right: 61.25rem;
+            right: 65.5rem;
             animation-delay: 1s;
 
         }
         &:nth-child(6) {
-            right: 76rem;
-            bottom: 4rem;
+            right: 80.5rem;
+            bottom: 3rem;
             animation-delay: 0.8s;
 
         }
         &:nth-child(7) {
-            right: 92.75rem;
-            bottom: 6rem;
+            right: 97rem;
+            bottom: 4.5rem;
             animation-delay: 0.6s;
 
         }
         &:last-child {
-            right: 105rem;
+            right: 109rem;
             bottom: 6rem;
             animation-delay: 0.4s;
         }
