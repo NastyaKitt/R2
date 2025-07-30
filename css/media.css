@@ -573,6 +573,16 @@
     }
 }
 @media (max-width: 480px) {
+    header {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .navItem, .navItemS {
+        width: 20%;
+    }
+    .navItemS {
+        justify-content: center;
+    }
     .starLight {
         width: 1rem;
     }
@@ -589,7 +599,7 @@
     .navItem {
         & .top {
             & img:first-child {
-                height: 0.75rem;
+                height: 1rem;
             }
         }
     }
@@ -634,18 +644,21 @@
         & .topS {
             & img:first-child {
                 margin: 0;
-                width: 4rem;
-                height: 1.3rem;
+                width: 5rem;
+                height: auto;
             }
         }
     }
     .rightHead {
+        justify-content: space-between;
+        padding: 1rem 1rem 0;
+        margin: 0;
         & a img {
-            width: 1.5rem;
+            width: 3rem;
         }
     }
     .navItem:hover .topHov img, .navItem.active .topHov img {
-        max-width: 4rem;
+        max-width: 100%;
     }
     .heross {
         & img {
@@ -720,68 +733,126 @@
         height: 25rem;
     }
     .tableTwo {
-        width: 18rem;
-        height: 18rem;
+        width: auto;
+        height: 30rem;
+        margin-right: 0;
+    }
+    .tableTwoGroup {
+        height: 100%;
     }
     .tableTwo {
         & img {
-            width: 9rem;
+            width: 14rem;
         }
     }
     .twoBlock {
-        height: 28rem;
+        height: 40rem;
     }
     .tableTwo {
         & img.gifka {
-            width: 10rem;
+            width: 18rem;
         }
     }
     .threeText, .threeTextChine {
-        width: 24rem;
+        width: 30rem;
         margin: 2rem 0 2rem 2rem;
     }
     .tableThree img {
-        width: 25rem;
+        width: 30rem;
     }
     .tableThree {
         margin-left: 2rem;
-        width: 25rem;
+        width: 30rem;
         padding: 2rem 0;
     }
     .threeBlock {
         padding: 2rem 0 2rem;
     }
+    .fourItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .fourItem img {
-        width: 12rem;
+        width: 65%;
+    }
+    .fourTextBotton {
+        padding: 0;
+    }
+    .fourList {
+        flex-direction: column-reverse;
+        align-items: center;
+        &:nth-child(4) {
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 4rem;
+        }
+    }
+    .fiveList {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
     }
     .fiveItem {
         & .number {
             width: 6rem;
         }
     }
+
+    .fourBlock {
+        flex-direction: column;
+        align-items: flex-end;
+    }
     .fiveItem {
         &:nth-child(1) {
+            width: 65%;
             & .fiveTable {
                 height:9rem;
             }
         }
         &:nth-child(2) {
+            width: 65%;
             & .fiveTable {
                 height: 9em;
             }
         }
         &:nth-child(3) {
+            width: 65%;
             & .fiveTable {
                 height: 9em;
             }
         }
     }
     .fiveList {
-        height: 35rem;
+        height: 55rem;
         padding-top: 2rem;
+        margin-left: 2rem;
+    }
+    .fiveItem {
+        margin: 0;
+        &:first-child {
+            & img:nth-child(2) {
+                width: 80%;
+                margin: 1rem 0 2rem;
+            }
+        }
+        &:nth-child(2) {
+            & img:nth-child(2) {
+                width: 80%;
+                height: auto;
+                margin: 1rem 0 2rem;
+            }
+        }
+        &:nth-child(3) {
+            & img:nth-child(2) {
+                width: 80%;
+                height: auto;
+                margin: 1rem 0 2rem;
+            }
+        }
     }
     .fiveBlock {
-        height: 40rem;
+        height: 60rem;
     }
     .sixButton {
         width: 15rem;
@@ -800,7 +871,7 @@
         width: 10rem;
     }
     .sixBlock {
-        height: 35rem;
+        height: 45rem;
     }
     .naming {
         top: 8rem;
@@ -857,6 +928,13 @@
             }
         }
     }
+    .navItem {
+        & .top {
+            & img:first-child {
+                height: 0.6rem;
+            }
+        }
+    }
     .naming {
         top: 9rem;
     }
@@ -866,10 +944,94 @@
     .navItem:hover .topHov img, .navItem.active .topHov img {
         max-width: 3rem;
     }
+    .threeText, .threeTextChine {
+        width: 28rem;
+        margin: 1rem 0 2rem 1rem;
+    }
+    .tableThree img {
+        width: 26rem;
+    }
+    .tableThree {
+        margin-left: 2rem;
+        width: 26rem;
+        padding: 2rem 0;
+    }
 }
 @media (max-width: 360px) {
     html {
         font-size: 10px;
+    }
+        .heross {
+        & img {
+            &:first-child {
+                left: 0;
+                top: 1rem;
+                width: 10rem;
+            }
+            &:nth-child(2) {
+                left: 17%;
+                top: 3rem;
+                width: 10rem;
+            }
+            &:nth-child(3) {
+                left: 30.5%;
+                top: 2.2rem;
+                width: 7rem;
+
+            }
+            &:nth-child(4) {
+                left: 31%;
+                top: 4.8rem;
+                width: 12rem;
+
+            }
+            &:nth-child(5) {
+                left: 45%;
+                top: 3rem;
+                width: 8rem;
+
+            }
+            &:nth-child(6) {
+                left: 53%;
+                top: 1.2rem;
+                width: 7rem;
+
+            }
+            &:nth-child(7) {
+                left: 56%;
+                top: 0.5rem;
+                width: 11rem;
+
+            }
+            &:last-child {
+                left: 73%;
+                top: -0.5rem;
+                width: 9rem;
+                height: auto;
+            }
+        }
+    }
+    .threeText, .threeTextChine {
+        width: 20rem;
+        margin: 2rem 0 2rem 2rem;
+    }
+    .tableThree img {
+        width: 20rem;
+    }
+    .tableThree {
+        width: 20rem;
+    }
+    .miniHeros {
+        margin: 1.5rem 0 2rem;
+    }
+    .fourTextBotton {
+        padding-left: 3rem;
+    }
+    .fiveList {
+        width: 80%;
+    }
+    .sixBlockButton {
+        height: 4rem;
     }
 }
 @media (max-width: 100px) {
