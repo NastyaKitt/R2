@@ -8,68 +8,112 @@ html {
     overflow-x: hidden;
     background-color: #28211F;
 }
+img {
+    object-fit: cover;
+}
 body {
   overflow-x: hidden;
 }
 button {
     cursor: pointer;
 }
-/* header {
-    height: 6.25rem;
-    padding: 0 3rem;
+header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
-/* ----------------------- centerHead*/
-.centerHead {
-    width: -webkit-fill-available;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 1rem;
-    & button {
-        width: -webkit-fill-available;
-        height: 100%;
-        background-image: url(img/headerButton.png);
-        background-color: transparent;
-        background-position: center;
-        background-size: cover;
-        color: #d7d7d7;
-        font-size: 2rem;
-        border: none;
-    }
-}
-/* ----------------------- rightHead*/
-.rightHead {
-    height: 5rem;
-    width: 11rem;
-    background-image: url(img/language.png);
+    background-image: url(img/general/headerBlockBack.jpg);
     background-size: cover;
+}
+.leftHead {
+    width: -webkit-fill-available;
+    display: flex;
+    padding-left: 9rem;
+}
+.rightHead {
+    display: flex;
+    margin-right: 3.5rem;
+    align-items: center;
+}
+.navItem, .navItemS {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    overflow-y: hidden;
+    &:last-child {
+        padding: 0;
+    }
+    & .top, .topS {
+        height: auto;
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow-y: hidden;
+        margin: 0 2rem;
+        padding-top: 1rem;
+        transition: opacity 0.3s;
+        & img:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+}
+.topHov {
+    opacity: 0;
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    margin: 0 1rem;
+    right: 0;
+    transition: opacity 0.3s;
+}
+.navItem:hover .topHov,
+.navItem.active .topHov {
+    opacity: 1;
+    max-width: 100% ;
+    max-height: 100%;
+    position: relative;
+    transition: opacity 0.3s;
+}
+
+.navItem:hover .top {
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: auto;
+    position: absolute;
+
+}
+.navItem.active .top {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s;
+}
+.navItem.active .topHov {
+    opacity: 1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    width: auto;
+    position: relative;
+    transition: opacity 0.3s;
 }
-.chinese,.korean {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-image: url(img/chinese.jpg);
-    background-position: center;
-    &:last-child {
-        background-image: url(img/korean.jpg);
-    }
+
+.starLight:nth-of-type(2),
+.starLight:nth-of-type(4),
+.starLight:nth-of-type(6) {
+    margin-right: 0.5rem;
 }
 /* ------------------------ heroBlock*/
 .heroBlock {
     height: 100vh;
-    background-image: url(img/mainBack.jpg);
+    background-image: url(img/general/mainBack.jpg);
     background-size: cover;
     position: relative;
 }
 .heros {
-    height: 100%;
+    width: 100%;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -108,54 +152,59 @@ button {
     }
 }
 .heross {
+    width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
     & img {
-        position: relative;
+        position: absolute;
         opacity: 0;
         animation: fadeIn 0.75s forwards;
         height: 51rem;
         &:first-child {
-            left: 15rem;
+            left: 10%;
+            top: 7rem;
             animation-delay: 0.4s;
         }
         &:nth-child(2) {
-            left: 3rem;
+            left: 22%;
+            top: 7rem;
             animation-delay: 0.6s;
         }
         &:nth-child(3) {
-            right: 12.5rem;
-            bottom: 3rem;
+            left: 33.5%;
+            top: 5rem;
             animation-delay: 0.8s;
 
         }
         &:nth-child(4) {
-            right: 34rem;
-            top: 3.5rem;
+            left: 33%;
+            top: 12rem;
             animation-delay: 1s;
             z-index: 2;
 
         }
         &:nth-child(5) {
-            right: 59.5rem;
+            left: 46%;
+            top: 8.75rem;
             animation-delay: 1s;
 
         }
         &:nth-child(6) {
-            right: 74.5rem;
-            bottom: 3rem;
+            left: 53.5%;
+            top: 5.75rem;
             animation-delay: 0.8s;
 
         }
         &:nth-child(7) {
-            right: 91rem;
-            bottom: 4.5rem;
+            left: 55%;
+            top: 5rem;
             animation-delay: 0.6s;
 
         }
         &:last-child {
-            right: 103rem;
-            bottom: 6rem;
+            left: 70%;
+            top: 5rem;
             animation-delay: 0.4s;
             height: 56rem;
         }
@@ -181,30 +230,27 @@ button {
 }
 /* ------------------------ twoBlock*/
 .twoBlock {
-    background-image: url(img/twoBlockBack.jpg);
+    background-image: url(img/general/twoBlockBack.jpg);
     height: 75rem;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-size: cover;
-    overflow: hidden;
 }
 .tableTwo {
-    background-image: url(img/twoBlockTable.png);
+    background-image: url(img/general/twoBlockTable.png);
+    background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    width: 60rem;
+    width: 60.5rem;
     height: 52rem;
     padding: 5rem 0;
     margin-right: 7rem;
     & img {
-        width: 30rem;
-    }
-    & video {
-        height: 20rem;
+        width: 25rem;
     }
 }
 .tableTwo, .tableTwo img, .tableTwo video {
@@ -228,9 +274,12 @@ button {
     left: 0;
     transition: all 1s;
 }
+img.gifka {
+    width: 30rem;
+}
 /* ----------------------- threeBlock*/
 .threeBlock {
-    background-image: url(img/threeBlockBack.jpg);
+    background-image: url(img/general/threeBlockBack.jpg);
     position: relative;
     z-index: 1;
     padding: 2rem 0 5rem;
@@ -239,15 +288,17 @@ button {
 .smoke {
     position: absolute;
     top: -10rem;
-    right: -12rem;
+    right: -25rem;
     z-index: 90;
     & img {
         width: 150%;
     }
 }
 .tableThree {
-    background-image: url(img/threeBlockTable.png);
+    background-image: url(img/general/threeBlockTable.png);
+    background-size: cover;
     width: 94rem;
+    padding: 5rem 0;
     position: relative;
     background-repeat: no-repeat;
     display: flex;
@@ -267,19 +318,80 @@ button {
     transition: all 1s ease;
 }
 .threeText {
-    mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
     opacity: 0;
     transform: translateY(100px);
     transition: all 1s ease;
+    margin: 3rem 0 3rem 5rem;
 }
 .threeText.visible {
     opacity: 1;
     transform: translateY(0);
     transition: all 1s ease;
 }
-/* ----------------------- fourBlock*/
+.threeTextChine {
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+    margin: 3rem 0 3rem 5rem;
+}
+.threeTextChine.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+/* ----------------------- fourBlock */
 .fourBlock {
-    background-image: url(img/fourBlockBack.jpg);
+    background-image: url(img/general/fourBlockBack.jpg);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    & .smoke {
+        top: -14rem;
+        width: 200%;
+        right: -20rem;
+    }
+}
+.fourMan {
+    position: absolute;
+    left: 0;
+}
+.fourList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    &:nth-child(4) {
+        margin-right: 7rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        justify-content: space-between;
+    }
+}
+.miniHeros {
+    margin: 1.5rem 0 4rem;
+}
+.fourTextBotton {
+    padding-left: 6rem;
+}
+.fourMan,.fourItem {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+
+}
+.fourMan.visible,.fourItem.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+/* ----------------------- fiveBlock*/
+.fiveBlock {
+    background-image: url(img/general/fiveBlockBack.jpg);
     position: relative;
     height: 89.5rem;
     background-size: cover;
@@ -292,20 +404,19 @@ button {
     height: 10rem;
     width: 150%;
 }
-.fourMan {
-    z-index: 5;
+.fiveMan {
     position: absolute;
     right: -10rem;
     opacity: 0;
     transition: all 1s;
     mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
 }
-.fourMan.visible {
+.fiveMan.visible {
     opacity: 1;
     right: 0;
     transition: all 1s;
 }
-.fourList {
+.fiveList {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -314,16 +425,19 @@ button {
     margin-left: 5rem;
     padding-top: 3rem;
 }
-.fourItem {
+.fiveItem {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
+    & img:nth-child(2) {
+        height: 5rem;
+    }
 }
-.fourTable {
-    background-image: url(img/fourBlockTable.png);
+.fiveTable {
+    background-image: url(img/general/fiveBlockTable.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 26.75rem;
@@ -332,31 +446,32 @@ button {
     justify-content: center;
     align-items: center;
 }
-.fourItem, .fourItem img, .fourTable, .fourTable img {
+.fiveItem, .fiveItem img, .fiveTable, .fiveTable img {
     opacity: 0;
     transform: translateY(100px);
     transition: all 1s ease;
 }
-.fourItem.visible, .fourItem img.visible, .fourTable.visible, .fourTable img.visible {
+.fiveItem.visible, .fiveItem img.visible, .fiveTable.visible, .fiveTable img.visible {
     opacity: 1;
     transform: translateY(0);
     transition: all 1s ease;
 }
 
-/* ----------------------- fiveBlock*/
-.fiveBlock {
-    background-image: url(img/fiveBlockBack.jpg);
+/* ----------------------- sixBlock*/
+.sixBlock {
+    background-image: url(img/general/sixBlockBack.jpg);
     height: 77rem;
     position: relative;
     background-size: cover;
     display: grid;
     justify-content: center;
     align-items: center;
+    justify-items: center;
 }
-.tableFive {
-    background-image: url(img/fiveBlockTable.png);
+.tableSix {
+    background-image: url(img/general/sixBlockTable.png);
     background-size: cover;
-    height: 44rem;
+    height: 38rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -370,23 +485,60 @@ button {
     position: relative;
     bottom: 5rem;
 }
-.fiveBlockButton {
-    width: 46rem;
-    height: 18.5rem;
-    background-image: url(img/fiveBlockButton.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.sixBlockButton {
+    height: 10rem;
     background-color: transparent;
+    background-size: cover;
     border: none;
+    transition: none;
+    position: relative;
 }
-.tableFive, .tableFive img,.dragons, .fiveBlockButton {
+.sixBlockButton:hover .sixButtonHov {
+    width: 125%;
+    opacity: 1;
+    position: absolute;
+    left: -10%;
+    top: -40%;
+    z-index: 1;
+}
+.sixButton {
+    width: 30rem;
+    z-index: 2;
+    position: relative;
+}
+.sixButtonHov {
+    width: 0;
+    opacity: 0;
+}
+.tableSix, .tableSix img,.dragons, .sixBlockButton {
     opacity: 0;
     transform: translateY(100px);
-    transition: all 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
-.tableFive.visible, .tableFive img.visible,.dragons.visible, .fiveBlockButton.visible {
+.tableSix.visible, .tableSix img.visible,.dragons.visible, .sixBlockButton.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: all 1s ease;
+    transition: transform 1s ease, opacity 1s ease;
 }
-/* 4, 1, 7, 3, 8, 2, 5, 6 */
+.logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-color: transparent;
+}
+.logos {
+    opacity: 1;
+}
+.logosHov {
+    opacity: 0;
+    width: 0;
+}
+.logo:hover .logos {
+    opacity: 0;
+    width: 0;
+}
+.logo:hover .logosHov {
+    opacity: 1;
+    width: auto;
+}
