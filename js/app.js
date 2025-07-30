@@ -33,3 +33,12 @@ document.querySelectorAll('.navItem').forEach(item => {
     item.classList.toggle('active');
   });
 });
+//
+
+window.addEventListener('load', function() {
+  const lazyImages = document.querySelectorAll('img.gifka');
+
+  lazyImages.forEach(function(img) {
+    img.src = img.getAttribute('data-src');
+  });
+});
